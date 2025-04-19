@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 8000;
 // Service URLs
 const AUTH_SERVICE =
   process.env.AUTH_SERVICE_URL ||
-  "https://auth-service-420747490152.us-central1.run.app:8001";
+  "https://auth-service-420747490152.us-central1.run.app";
 const PRODUCT_SERVICE =
   process.env.PRODUCT_SERVICE_URL || "http://localhost:8003";
 const CART_SERVICE = process.env.CART_SERVICE_URL || "http://localhost:8002";
