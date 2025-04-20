@@ -10,9 +10,10 @@ import fs from "fs";
 import path from "path";
 import { Request, Response } from "express";
 
-// Load environment variables
+// Load environment variables from .env file
 dotenv.config();
 
+// Initialize Express application
 const app = express();
 const PORT = process.env.PORT || 8000;
 
