@@ -17,7 +17,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-// Service URLs
+// Service URLs configurations
 const AUTH_SERVICE =
   process.env.AUTH_SERVICE_URL ||
   "https://auth-service-420747490152.us-central1.run.app";
@@ -28,7 +28,7 @@ const ORDER_SERVICE = process.env.ORDER_SERVICE_URL || "http://localhost:8004";
 const REVIEW_SERVICE =
   process.env.REVIEW_SERVICE_URL || "http://localhost:8005";
 
-// Create uploads directory
+// Create uploads directory for temporary file storage
 const uploadsDir = path.join(__dirname, "uploads");
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
@@ -47,7 +47,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Middleware
+// Middleware Configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
